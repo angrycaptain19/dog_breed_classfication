@@ -7,8 +7,7 @@ class FeatureGenerator():
     # feature-descriptor-1: Hu Moments
     def fd_hu_moments(self, image):
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        feature = cv2.HuMoments(cv2.moments(image)).flatten()
-        return feature
+        return cv2.HuMoments(cv2.moments(image)).flatten()
 
     # feature-descriptor-2: Haralick Texture
     def fd_haralick(self, image):
